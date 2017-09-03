@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mikrosoft Draw</title>
+    <meta charset="UTF-8">
+    <link href="app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bar">
+        <div class="tools">
+            <button id="clear">Clear Canvas</button>
+            <div class="size">
+                <label>Stroke Size:</label>
+                <input id="size" type="number" value="5">
+            </div>
+        </div>
+        <div class="color-picker">
+            <label>Color Picker:</label>
+            <input type="color" id="color">
+            <ul id="last-colors"> </ul>
+        </div>
+    </div>
+    <div id="canvas"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
