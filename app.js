@@ -1,4 +1,5 @@
 (function () {
+    // vars
     var mousePos = {};
     var drawing = false;
     var color = "#000"
@@ -6,6 +7,7 @@
     var colors = [];
     var updateColors = true;
 
+    //create svg settings
     var standard = 'http://www.w3.org/2000/svg';
 
     var canvas = document.getElementById('canvas');
@@ -40,7 +42,7 @@
             console.error('Mouse pos not set');
         }
     }
-
+    // Draw Circle function for start and end
     function drawCircle(p) {
 
         var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
@@ -56,7 +58,7 @@
 
         svg.appendChild(circle);
     }
-
+    // Draw lines when you move the mouse
     function drawLine(from, to) {
         
         var line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
@@ -128,16 +130,6 @@
         updateColors = true;
     });
 
-    // extend canvas on resize
-    window.addEventListener('resize', function (evt) {
-        if (canvas.clientHeight > svg.clientHeight) {
-            svg.style.height = canvas.clientHeight;
-        }
-        if (canvas.clientWidth > svg.clientWidth) {
-            svg.style.width = canvas.clientWidth;
-        }
-    });
-
     //Last colors used
     function AddColorBtn(color) {
         var elem = document.createElement('li');
@@ -164,4 +156,14 @@
             input.dispatchEvent(event);
         }
     });
+
+        // extend canvas on resize
+        window.addEventListener('resize', function (evt) {
+            if (canvas.clientHeight > svg.clientHeight) {
+                svg.style.height = canvas.clientHeight;
+            }
+            if (canvas.clientWidth > svg.clientWidth) {
+                svg.style.width = canvas.clientWidth;
+            }
+        });
 })();
