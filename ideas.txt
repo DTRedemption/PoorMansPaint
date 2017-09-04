@@ -1,2 +1,3 @@
 Save as SVG (maybe more?)
 Rainbow mode
+Cursor turns into "brush" circle that scales with the size you use.
